@@ -28,7 +28,7 @@
         <section>
             <div>
                 <fieldset>
-                <legend>Tax Filing Practice</legend>
+                <legend><b>Tax Filing Practice</b></legend>
                 <p>Work through the forms in order. They begin with basic text inputs and finish with a more complete tax return.</p>
                 <p><b>Learning goal:</b> notice how labels, names, values, validation, and grouped controls work together.</p>
 </fieldset>
@@ -36,7 +36,51 @@
         </section>
         <br>
         <section>
+            <fieldset>
+            <form>
+            <h2>1. Taxpayer Contactt</h2>
+            <p>A simple form using text, email, telephone, and submit controls.</p>
             
+            
+               <label for="fname">Full Name</label>
+               <input id="fname" type="text" name="name" required><br><br>
+               <label for="em">Email Adress</label> 
+               <input id="em" type="email" name="email"><br><br>
+                <label for="pho">Phone:</label> 
+               <input  id="pho" type="tel" placeholder="Pls enter ur phone num" ><br><br>
+               <button type="submit">Save contct</button>
+            
+            </form>
+
+</fieldset>
+        </section><br>
+        <section>
+            <h2>2. Choose a Return</h2>
+            <p>This form adds select menus, dates, radio buttons, and grouped controls.</p>
+            <fieldset>
+                <h4>Filing details</h4>
+                <label for="op">Tax Type</label> <br>
+               <select  id="op" name="type" required><br>
+                    <option value="VAT">VAT</option>
+                    <option value="CIT">CIT</option>
+                    <option value="PIT">PIT</option>
+                </select><br>
+                 <label for="datt">Period ending</label> <br>
+               <input  id="datt" type="date"  ><br>
+                
+
+            </fieldset>
+            <fieldset>
+                <h4>Return frequency</h4>
+                 <input type="radio" id="size-1" name="size" value="Monthly" checked>
+                 <label for="size-1">Monthly</label><br>
+                 <input type="radio" id="size-2" name="size" value="Quarterly" >
+                 <label for="size-2">Quarterly</label><br>
+                 <input type="radio" id="size-3" name="size" value="Annual" >
+                 <label for="size-3">Annual</label>
+
+            </fieldset>
+
         </section>
     </body>
 
