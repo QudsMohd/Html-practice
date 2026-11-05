@@ -21,7 +21,7 @@
         <form>
         <label>Search the portal</label><br>
         <input placeholder="e.g VAT return">
-        <button>Search</button>
+        <button type="submit">Search</button>
         </form>
     </header><br><br>
     <body>
@@ -96,6 +96,39 @@
 
         </section>
         <br><br>
+        <section>
+            <form>
+            <h2>Register a Payment</h2>
+            
+            <fieldset>
+                <legend>Personal details</legend>
+               <label for="fname">Full Name</label>
+               <input id="fname" type="text" name="name" required><br><br>
+               <label for="em">Email</label> 
+               <input id="em" type="email" name="email">
+            </fieldset>
+            <fieldset>
+                <legend>Payment details</legend>
+                <label>Amount (OMR)</label>
+               <input type="number" name="amount" ><small> Enter the amount in Omani Rials, up to two decimal places.</small><br><br>
+               <label>Tax Type</label> 
+               <select  name="type" required>
+                    <option value="VAT">VAT</option>
+                    <option value="CIT">CIT</option>
+                    <option value="PIT">PIT</option>
+                </select>
+
+            </fieldset>
+            
+                <input type="checkbox" id="confirm" name="con" required>
+                <label for="confirm"> I confirm the information above is accurate </label>
+                <button type="submit">Submit Payment</button>
+                <button type="reset">Clear Form</button>
+            
+            </form>
+            
+
+        </section>
         <section>
             <nav>
              <h2>Quick Links</h2> 
