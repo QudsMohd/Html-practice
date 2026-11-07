@@ -55,6 +55,7 @@
 </fieldset>
         </section><br>
         <section>
+            <form>
             <h2>2. Choose a Return</h2>
             <p>This form adds select menus, dates, radio buttons, and grouped controls.</p>
             <fieldset>
@@ -80,8 +81,53 @@
                  <label for="size-3">Annual</label>
 
             </fieldset>
+            <button type="submit">Continue</button>
+        </form>
 
-        </section>
+        </section><br>
+        <section>
+            <form>
+            <h2>3. Income and Deductions</h2>
+            <p>This form introduces number inputs, a datalist, a range control, a textarea, and calculated output.</p>
+            <fieldset>
+                <h3>Tax calculation</h3>
+                <label for="inc">Gross income (OMR)</label><br>
+                <input id="inc" type="number" name="income" required><br><br>
+                <label for="ded">Allowable deductions (OMR)</label><br> 
+                <input id="ded" type="number" name="deductions"><br><br>
+
+            </fieldset><br>
+            <label for="num">Confidence</label><br>
+            <input id="num" type="number" name="Confidence" min="1" max="10" required><br>
+            <small>Confidence in this estimate (1-10)</small><br><br>
+            <label for="note">Calculation notes</label> <br>
+            <textarea id="note" name="notee"></textarea><br><br>
+                <button type="submit">Save calculation</button>
+        </form></section><br>
+        <section>
+            <form>
+            <h2>4. Complete and Submit</h2>
+            <p>The final form combines document upload, checkboxes, month and time controls, a declaration, and reset and submit actions.</p><br>
+             <fieldset>
+                <h3>Supporting records</h3>
+                <label for="mon">Accounting month</label><br>
+                <input id="mon" type="month" name="month"><br><br>
+                <label for="doc">Upload supporting documents</label><br>
+                <input id="doc" type="file" name="document" accept=".pdf,.csv,.png,.jpg,.jpeg" multiple><br>
+                <small>Accepted example: PDF,CSV,JPG, or PNG</small><br><br>
+                <label for="op">Records included:</label> <br>
+                <input type="checkbox" id="Sales" name="records" >
+                <label for="Sales">Sales invoices</label><br>
+                <input type="checkbox" id="receipts" name="records" >
+                <label for="receipts">Expense receipts</label><br>
+                <input type="checkbox" id="statement" name="records" >
+                <label for="statement">Bank statement</label><br>
+           
+            </fieldset><br>
+            <fieldset></fieldset><br>
+            <button type="submit">Submit practice return</button>
+            <button type="reset">Clear form</button>
+        </form></section>
     </body>
 
 </html>
