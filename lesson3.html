@@ -1,141 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>Form practice</title>
-    </head>
-    <header>
-        <h1>Taxpayer Portal</h1>
-        <p>Online Tax Services</p>
-        <nav>
-            <div>
-                <a href="">Home</a>&nbsp;
-                <a href="">Tax Filing</a>&nbsp;
-                <a href="">Payments</a>&nbsp;
-                <a href="">Support</a>&nbsp;
-                <a href="">About</a>
-
-            </div><br>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form practice</title>
+  </head>
+  <header>
+    <h1>Taxpayer Portal</h1>
+    <p>Online Tax Services</p>
+    <nav>
+      <div>
+        <a href="">Home</a>&nbsp; <a href="">Tax Filing</a>&nbsp;
+        <a href="">Payments</a>&nbsp; <a href="">Support</a>&nbsp;
+        <a href="">About</a>
+      </div>
+      <br />
+    </nav>
+    <form>
+      <label>Search the portal</label><br />
+      <div>
+      <input placeholder="e.g VAT return" />
+      <button type="submit">Search</button>
+    </div>
+    </form>
+  </header>
+  <br /><br />
+  <body>
+    <section>
+      <div>
+        <fieldset>
+          <legend><b>Tax Filing Practice</b></legend>
+          <p>
+            Work through the forms in order. They begin with basic text inputs
+            and finish with a more complete tax return.
+          </p>
+          <p>
+            <b>Learning goal:</b> notice how labels, names, values, validation,
+            and grouped controls work together.
+          </p>
+        </fieldset>
+      </div>
+    </section>
+    <br />
+    <section>
+      <fieldset>
         <form>
-        <label>Search the portal</label><br>
-        <input placeholder="e.g VAT return">
-        <button type="submit">Search</button>
+          <h2>1. Taxpayer Contactt</h2>
+          <p>
+            A simple form using text, email, telephone, and submit controls.
+          </p>
+
+          <label for="fname">Full Name</label>
+          <input id="fname" type="text" name="name" required /><br /><br />
+          <label for="em">Email Adress</label>
+          <input id="em" type="email" name="email" /><br /><br />
+          <label for="pho">Phone:</label>
+          <input
+            id="pho"
+            type="tel"
+            placeholder="Pls enter ur phone num"
+          /><br /><br />
+          <button type="submit">Save contct</button>
         </form>
-    </header><br><br>
-    <body>
-        <section>
-            <div>
-                <fieldset>
-                <legend><b>Tax Filing Practice</b></legend>
-                <p>Work through the forms in order. They begin with basic text inputs and finish with a more complete tax return.</p>
-                <p><b>Learning goal:</b> notice how labels, names, values, validation, and grouped controls work together.</p>
-</fieldset>
-            </div>
-        </section>
-        <br>
-        <section>
-            <fieldset>
-            <form>
-            <h2>1. Taxpayer Contactt</h2>
-            <p>A simple form using text, email, telephone, and submit controls.</p>
-            
-            
-               <label for="fname">Full Name</label>
-               <input id="fname" type="text" name="name" required><br><br>
-               <label for="em">Email Adress</label> 
-               <input id="em" type="email" name="email"><br><br>
-                <label for="pho">Phone:</label> 
-               <input  id="pho" type="tel" placeholder="Pls enter ur phone num" ><br><br>
-               <button type="submit">Save contct</button>
-            
-            </form>
-
-</fieldset>
-        </section><br>
-        <section>
-            <form>
-            <h2>2. Choose a Return</h2>
-            <p>This form adds select menus, dates, radio buttons, and grouped controls.</p>
-            <fieldset>
-                <h4>Filing details</h4>
-                <label for="op">Tax Type</label> <br>
-               <select  id="op" name="type" required><br>
-                    <option value="VAT">VAT</option>
-                    <option value="CIT">CIT</option>
-                    <option value="PIT">PIT</option>
-                </select><br>
-                 <label for="datt">Period ending</label> <br>
-               <input  id="datt" type="date"  ><br>
-                
-
-            </fieldset>
-            <fieldset>
-                <h4>Return frequency</h4>
-                 <input type="radio" id="size-1" name="size" value="Monthly" checked>
-                 <label for="size-1">Monthly</label><br>
-                 <input type="radio" id="size-2" name="size" value="Quarterly" >
-                 <label for="size-2">Quarterly</label><br>
-                 <input type="radio" id="size-3" name="size" value="Annual" >
-                 <label for="size-3">Annual</label>
-
-            </fieldset>
-            <button type="submit">Continue</button>
-        </form>
-
-        </section><br>
-        <section>
-            <form>
-            <h2>3. Income and Deductions</h2>
-            <p>This form introduces number inputs, a datalist, a range control, a textarea, and calculated output.</p>
-            <fieldset>
-                <h3>Tax calculation</h3>
-                <label for="inc">Gross income (OMR)</label><br>
-                <input id="inc" type="number" name="income" required><br><br>
-                <label for="ded">Allowable deductions (OMR)</label><br> 
-                <input id="ded" type="number" name="deductions"><br><br>
-
-            </fieldset><br>
-            <label for="num">Confidence</label><br>
-            <input id="num" type="number" name="Confidence" min="1" max="10" required><br>
-            <small>Confidence in this estimate (1-10)</small><br><br>
-            <label for="note">Calculation notes</label> <br>
-            <textarea id="note" name="notee"></textarea><br><br>
-                <button type="submit">Save calculation</button>
-        </form></section><br>
-        <section>
-            <form>
-            <h2>4. Complete and Submit</h2>
-            <p>The final form combines document upload, checkboxes, month and time controls, a declaration, and reset and submit actions.</p><br>
-             <fieldset>
-                <h3>Supporting records</h3>
-                <label for="mon">Accounting month</label><br>
-                <input id="mon" type="month" name="month"><br><br>
-                <label for="doc">Upload supporting documents</label><br>
-                <input id="doc" type="file" name="document" accept=".pdf,.csv,.png,.jpg,.jpeg" multiple><br>
-                <small>Accepted example: PDF,CSV,JPG, or PNG</small><br><br>
-                <label for="op">Records included:</label> <br>
-                <input type="checkbox" id="Sales" name="records" >
-                <label for="Sales">Sales invoices</label><br>
-                <input type="checkbox" id="receipts" name="records" >
-                <label for="receipts">Expense receipts</label><br>
-                <input type="checkbox" id="statement" name="records" >
-                <label for="statement">Bank statement</label><br>
-           
-            </fieldset><br>
-            <fieldset>
-                <h3>Declaration</h3>
-                <label for="name">Type your full name as a signature</label><br>
-                <input id="name" type="text" name="signature"><br><br>
-                <label for="time">Time signed</label><br>
-                <input id="time" type="time" name="time_si"><br>
-                <input type="checkbox" id="statement" name="confirm" >
-                <label for="statement"> I confirm that the information in this practice return is accurate.</label><br>
-            </fieldset><br>
-            <button type="submit">Submit practice return</button>
-            <button type="reset">Clear form</button>
-        </form></section>
-    </body>
-
+      </fieldset>
+    </section>
+    <br />
+    <section>
+      <form>
+        <h2>2. Choose a Return</h2>
+        <p>
+          This form adds select menus, dates, radio buttons, and grouped
+          controls.
+        </p>
+        <fieldset>
+          <h4>Filing details</h4>
+          <label for="op">Tax Type</label> <br />
+          <select id="op" name="type" required>
+            <br />
+            <option value="VAT">VAT</option>
+            <option value="CIT">CIT</option>
+            <option value="PIT">PIT</option></select
+          ><br />
+          <label for="datt">Period ending</label> <br />
+          <input id="datt" type="date" /><br />
+        </fieldset>
+        <fieldset>
+          <h4>Return frequency</h4>
+          <input type="radio" id="size-1" name="size" value="Monthly" checked />
+          <label for="size-1">Monthly</label><br />
+          <input type="radio" id="size-2" name="size" value="Quarterly" />
+          <label for="size-2">Quarterly</label><br />
+          <input type="radio" id="size-3" name="size" value="Annual" />
+          <label for="size-3">Annual</label>
+        </fieldset>
+        <button type="submit">Continue</button>
+      </form>
+    </section>
+    <br />
+    <section>
+      <form>
+        <h2>3. Income and Deductions</h2>
+        <p>
+          This form introduces number inputs, a datalist, a range control, a
+          textarea, and calculated output.
+        </p>
+        <fieldset>
+          <h3>Tax calculation</h3>
+          <label for="inc">Gross income (OMR)</label><br />
+          <input id="inc" type="number" name="income" required /><br /><br />
+          <label for="ded">Allowable deductions (OMR)</label><br />
+          <input id="ded" type="number" name="deductions" /><br /><br />
+        </fieldset>
+        <br />
+        <label for="num">Confidence</label><br />
+        <input
+          id="num"
+          type="number"
+          name="Confidence"
+          min="1"
+          max="10"
+          required
+        /><br />
+        <small>Confidence in this estimate (1-10)</small><br /><br />
+        <label for="note">Calculation notes</label> <br />
+        <textarea id="note" name="notee"></textarea><br /><br />
+        <button type="submit">Save calculation</button>
+      </form>
+    </section>
+    <br />
+    <section>
+      <form>
+        <h2>4. Complete and Submit</h2>
+        <p>
+          The final form combines document upload, checkboxes, month and time
+          controls, a declaration, and reset and submit actions.
+        </p>
+        <br />
+        <fieldset>
+          <h3>Supporting records</h3>
+          <label for="mon">Accounting month</label><br />
+          <input id="mon" type="month" name="month" /><br /><br />
+          <label for="doc">Upload supporting documents</label><br />
+          <input
+            id="doc"
+            type="file"
+            name="document"
+            accept=".pdf,.csv,.png,.jpg,.jpeg"
+            multiple
+          /><br />
+          <small>Accepted example: PDF,CSV,JPG, or PNG</small><br /><br />
+          <label for="op">Records included:</label> <br />
+          <input type="checkbox" id="Sales" name="records" />
+          <label for="Sales">Sales invoices</label><br />
+          <input type="checkbox" id="receipts" name="records" />
+          <label for="receipts">Expense receipts</label><br />
+          <input type="checkbox" id="statement" name="records" />
+          <label for="statement">Bank statement</label><br />
+        </fieldset>
+        <br />
+        <fieldset>
+          <h3>Declaration</h3>
+          <label for="name">Type your full name as a signature</label><br />
+          <input id="name" type="text" name="signature" /><br /><br />
+          <label for="time">Time signed</label><br />
+          <input id="time" type="time" name="time_si" /><br />
+          <input type="checkbox" id="statement" name="confirm" />
+          <label for="statement">
+            I confirm that the information in this practice return is
+            accurate.</label
+          ><br />
+        </fieldset>
+        <br />
+        <button type="submit">Submit practice return</button>
+        <button type="reset">Clear form</button>
+      </form>
+    </section>
+  </body>
 </html>
